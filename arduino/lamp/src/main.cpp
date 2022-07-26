@@ -4,12 +4,12 @@
 
 const char ssid[] = "101";
 const char pass[] = "it123456";
-char MQTTClientId[] = "lamp";
-char MQTTBrockerPath[] = "butterferret278.cloud.shiftr.io";
-char MQTTLogin[] = "butterferret278";
-char MQTTPassword[] = "BLdlhbpO9NR7YXdI";
-char MQTTTopicSubscribe[] = "/Russia/Chelyabinsk";
-char MQTTTopicPublish[] = "/Russia/Chelyabinsk";
+char MQTTClientId[] = "lamp"; 
+char MQTTBrockerPath[] = "";
+char MQTTLogin[] = "";
+char MQTTPassword[] = "";
+char MQTTTopicSubscribe[] = "";
+char MQTTTopicPublish[] = "";
 
 WiFiClient net;
 MQTTClient client;
@@ -56,8 +56,6 @@ void setup() {
 void loop() {
   client.loop();
   delay(10);
-
-
 
   if (!client.connected()) {
     connect();
